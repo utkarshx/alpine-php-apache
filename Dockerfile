@@ -4,7 +4,6 @@ FROM alpine:3
 RUN apk --update add apache2 php7-apache2 curl \
     php7-json php7-phar php7-openssl php7-mysqli php7-curl php7-mcrypt php7-pdo_mysql php7-ctype php7-gd php7-xml php7-dom php7-iconv \
     && rm -f /var/cache/apk/* \
-    && mkdir /run/apache2 \
     && mkdir -p /opt/utils
     
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
