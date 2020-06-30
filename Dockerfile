@@ -2,7 +2,7 @@ FROM alpine:3
 
 # Setup apache and php
 RUN apk --update add apache2 php7-apache2 curl \
-    php7-json php7-phar php7-openssl php7-mysqli php7-curl php7-tokenizer php7-session php7-mcrypt php7-pdo_mysql php7-ctype php7-gd php7-xml php7-dom php7-iconv \
+    php7-json php7-phar php7-openssl php7-mysqli php7-curl php7-tokenizer php7-pdo_sqlite php7-session php7-mcrypt php7-pdo_mysql php7-ctype php7-gd php7-xml php7-dom php7-iconv \
     && rm -f /var/cache/apk/* \
     && mkdir -p /opt/utils
     
